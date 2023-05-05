@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 @WebServlet(name = "HelloServlet", urlPatterns = "/")
-// @ServletSecurity(value = @HttpConstraint(rolesAllowed = { "user" }))
+@ServletSecurity(value = @HttpConstraint(rolesAllowed = { "user" }))
 public class HelloServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
@@ -23,18 +23,17 @@ public class HelloServlet extends HttpServlet {
             throws IOException, ServletException {
 
         PrintWriter writer = response.getWriter();
-        writer.println("Hello");
 
-        // String username = request.getUserPrincipal().getName();
-        // writer.println("Hello " + username);
+        String username = request.getUserPrincipal().getName();
+        writer.println("Hello " + username);
 
-        // String accessToken = UserProfileManager.getUserProfile().getAccessToken();
-        // writer.println("\nAccess Token:");
-        // writer.println(accessToken);
+        String accessToken = UserProfileManager.getUserProfile().getAccessToken();
+        writer.println("\nAccess Token:");
+        writer.println(accessToken);
 
-        // String idToken = UserProfileManager.getUserProfile().getIdToken().compact();
-        // writer.println("\nId Token:");
-        // writer.println(idToken);
+        String idToken = UserProfileManager.getUserProfile().getIdToken().compact();
+        writer.println("\nId Token:");
+        writer.println(idToken);
 
     }
 }
