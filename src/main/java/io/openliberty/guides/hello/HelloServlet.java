@@ -23,6 +23,7 @@ public class HelloServlet extends HttpServlet {
             throws IOException, ServletException {
 
         PrintWriter writer = response.getWriter();
+        writer.println("<h1>Welcome to Adam's (copy of a copy of a) sample web application!");
 
         String username = request.getUserPrincipal().getName();
         writer.println("Hello " + username);
