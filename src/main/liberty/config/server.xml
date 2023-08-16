@@ -1,5 +1,5 @@
 <server description="Sample Liberty server">
-
+<!-- add comment - 8/16 12:35 -->
     <featureManager>
         <feature>socialLogin-1.0</feature>
         <feature>appSecurity-4.0</feature>
