@@ -25,6 +25,7 @@ public class HelloServlet extends HttpServlet {
         PrintWriter writer = response.getWriter();
         writer.println("<h1>Welcome to Adam's (copy of a copy of a) sample web application!");
         writer.println("<pre>Date: 2023-05-17 3:42</pre>");
+        // change
 
         String username = request.getUserPrincipal().getName();
         writer.println("Hello " + username);
