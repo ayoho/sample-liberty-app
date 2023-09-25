@@ -25,21 +25,6 @@
     <liberty.var.app.context.root>/</liberty.var.app.context.root>
   </properties>
 
-  <pluginRepositories>
-    <pluginRepository>
-      <id>oss-sonatype-snapshots</id>
-      <name>oss-sonatype-snapshots</name>
-      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-      <snapshots>
-        <enabled>true</enabled>
-        <updatePolicy>always</updatePolicy>
-      </snapshots>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-    </pluginRepository>
-  </pluginRepositories>
-
   <dependencies>
     <!-- Dependencies -->
     <dependency>
