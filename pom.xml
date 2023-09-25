@@ -54,13 +54,13 @@
       <artifactId>jakarta.jakartaee-api</artifactId>
       <version>10.0.0</version>
       <scope>provided</scope>
-    </dependency>    
+    </dependency>
     <dependency>
         <groupId>com.ibm.websphere.appserver.api</groupId>
         <artifactId>com.ibm.websphere.appserver.api.social</artifactId>
         <version>1.0.59</version>
         <scope>provided</scope>
-    </dependency>  
+    </dependency>
     <dependency>
       <groupId>com.ibm.websphere.appserver.api</groupId>
       <artifactId>com.ibm.websphere.appserver.api.jwt</artifactId>
@@ -104,29 +104,7 @@
 
   <build>
     <finalName>${project.artifactId}</finalName>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>com.ibm.websphere.appserver.features</groupId>
-          <artifactId>slsa-maven-plugin</artifactId>
-          <version>1.0-SNAPSHOT</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
     <plugins>
-      <plugin>
-        <groupId>com.ibm.websphere.appserver.features</groupId>
-        <artifactId>slsa-maven-plugin</artifactId>
-        <version>1.0-SNAPSHOT</version>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>generate-provenance</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
